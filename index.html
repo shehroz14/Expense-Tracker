@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <div>
+          <p class="small-text">Welcome back</p>
+          <h1>Expense Tracker</h1>
+        </div>
+        <button class="btn">+ Add Transaction</button>
+      </header>
+
+      <section class="summary">
+        <div class="card balance">
+          <p>Total Balance</p>
+          <h2 class="balance-amt">PKR 0</h2>
+          <span>Updated today</span>
+        </div>
+
+        <div class="card income">
+          <p>Income</p>
+          <h3 class="income-amt">PKR 0</h3>
+        </div>
+
+        <div class="card expense">
+          <p>Expenses</p>
+          <h3 class="expenses-amt">PKR 0</h3>
+        </div>
+      </section>
+
+      <main class="content">
+        <section class="transactions">
+          <div class="section-title">
+            <h2>Recent Transactions</h2>
+            <a href="#">View All</a>
+          </div>
+
+          <div class="transaction-list" id="transactionList"></div>
+        </section>
+
+        <aside class="form-box">
+          <h2>Add New Expense</h2>
+          <form class="expense-form">
+            <label>
+              Title
+              <input type="text" placeholder="Enter title"  class="new-title"/>
+            </label>
+
+            <label>
+              Amount
+              <input type="number" placeholder="Enter amount" class="new-amt"/>
+            </label>
+
+            <label>
+              Category
+              <select class="expense-category">
+                <option value="select category">Select category</option>
+                <option value="food">Food</option>
+                <option value="transport">Transport</option>
+                <option value="shopping">Shopping</option>
+                <option value="bills">Bills</option>
+                <option value="entertainment">Entertainment</option>
+              </select>
+            </label>
+
+            <label>
+              Date
+              <input type="date" class="date" />
+            </label>
+
+            <label>
+              Type
+              <div class="radio-group">
+                <label>
+                    <input class="transaction-type" type="radio" name="type" value="income" /> Income
+                </label>
+                <label>
+                    <input class="transaction-type" type="radio" name="type" value="expense"/> Expense
+                </label>
+              </div>
+            </label>
+
+            <button type="submit" class="btn full">Save Transaction</button>
+          </form>
+        </aside>
+      </main>
+    </div>
+  </body>
+</html>
